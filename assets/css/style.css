@@ -1,0 +1,19 @@
+.header {
+	background-color: grey;
+}
+
+.wordguess {
+	background-color: lightblue;
+}
+
+.wrong_guesses {
+background-color: yellow;
+}
+
+.guesses_left {
+	background-color: pink;
+}
+
+.wins {
+	background-color: green;
+}
