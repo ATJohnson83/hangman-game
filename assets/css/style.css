@@ -1,19 +1,53 @@
+html {
+	background: url(../images/bach.jpg) no-repeat center center fixed; 
+}
+
 .header {
-	background-color: grey;
+	background-color: rgba(120,120,120,.8);
+	border-radius: 30%;
+	text-align: center;
+	color: white;
+	margin-left: 100px;
+	margin-right: 100px;
 }
 
 .wordguess {
-	background-color: lightblue;
+	background-color:rgba(120,120,120,.8) ;
+	border-radius: 30%;
+	text-align: center;
+	color: white;
+	margin: 20px 100px;
+	padding: 20px;
+	font-size: 40px;
+
 }
 
 .wrong_guesses {
-background-color: yellow;
+background-color: rgba(120,120,120,.8);
+border-radius: 30%;
+text-align: center;
+	color: white;
+	margin: 20px 100px;
+	padding: 10px;
+	font-size: 20px;
 }
 
 .guesses_left {
-	background-color: pink;
+	background-color: rgba(120,120,120,.8);
+	border-radius: 30%;
+	text-align: center;
+	color: white;
+	margin: 20px 100px;
+	padding: 10px;
+	font-size: 20px;
 }
 
 .wins {
-	background-color: green;
+	background-color: rgba(120,120,120,.8);
+	border-radius: 30%;
+	text-align: center;
+	color: white;
+	margin: 20px 100px;
+	padding: 10px;
+	font-size: 20px;
 }
