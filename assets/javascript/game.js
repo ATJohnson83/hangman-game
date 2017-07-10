@@ -2,11 +2,12 @@ var composers = ["bach","mozart","beethoven","debussy","stravinsky"];
 var randomComposer = composers[Math.floor(Math.random() * composers.length)];
 var guessComposer = [];
 	
+	
 	for (var i=0; i<randomComposer.length; i++){
 	guessComposer[i] = "-";
 	}
-	var el = document.getElementById('guessword');
-		el.innerHTML=guessComposer.join(" ");
+	var guesswrd = document.getElementById('guessword');
+		guesswrd.innerHTML=guessComposer.join(" ");
 
 
 var wrongGuesses = [];
@@ -19,7 +20,11 @@ var ele = document.getElementById('remaining');
 
 var wins = 0;
 var elem = document.getElementById('numwins');
-		elem.innerHTML=wins;
+	elem.innerHTML=wins;
+
+var losses = 0;
+var loser = document.getElementById('numlosses');
+	loser.innerHTML=losses;
 
 document.onkeyup = function(event) {
 	
@@ -35,7 +40,7 @@ document.onkeyup = function(event) {
 			}
 	}
 	
-	if (userGuess !== randomComposer[j]){
+	if (randomComposer.indexOf(userGuess) == -1){
 			wrongGuesses.push(userGuess);
 			guessesLeft --;
 			var wg = document.getElementById('wrong');
@@ -52,6 +57,8 @@ document.onkeyup = function(event) {
 
 		if(guessesLeft===0){
 			alert("You lost, study more music...");
+			losses++;
+			loser.innerHTML=losses;
 		}
 
 		var el = document.getElementById('guessword');
