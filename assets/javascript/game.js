@@ -67,6 +67,5 @@ document.onkeyup = function(event) {
 		var ele = document.getElementById('remaining');
 		ele.innerHTML=guessesLeft;
 
-		console.log(randomComposer.length);
 }
 
