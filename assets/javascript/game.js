@@ -13,7 +13,7 @@ var wrongGuesses = [];
 // var eleme = document.getElementById('wrong');
 // 		eleme.innerHTML=wrongGuesses;
 
-var guessesLeft = 15;
+var guessesLeft = 12;
 var ele = document.getElementById('remaining');
 		ele.innerHTML=guessesLeft;
 
@@ -43,9 +43,11 @@ document.onkeyup = function(event) {
 		}
 
 		
-		if(guessComposer == randomComposer){
+		if(guessComposer.every((v,i)=>v === randomComposer[i]) ){
 			alert("Congratulations, You Won!");
-			wins++;
+			 wins++;
+			elem.innerHTML=wins;
+
 		}
 
 		if(guessesLeft===0){
