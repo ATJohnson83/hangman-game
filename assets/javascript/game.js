@@ -1,7 +1,22 @@
 var composers = ["bach","mozart","beethoven","debussy","stravinsky"];
 var randomComposer = composers[Math.floor(Math.random() * composers.length)];
 var guessComposer = [];
-	
+
+
+function reset() {
+
+	wrongGuesses = [];
+	console.log(wrongGuesses);
+	guessesLeft = 12;
+	console.log(guessesLeft);
+
+	for (var i=0; i<randomComposer.length; i++){
+	guessComposer[i] = "-";
+	}
+	var guesswrd = document.getElementById('guessword');
+		guesswrd.innerHTML=guessComposer.join(" ");
+
+}	
 	
 	for (var i=0; i<randomComposer.length; i++){
 	guessComposer[i] = "-";
