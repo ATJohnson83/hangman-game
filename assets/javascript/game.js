@@ -56,11 +56,20 @@ document.onkeyup = function(event) {
 	}
 	
 	if (randomComposer.indexOf(userGuess) == -1){
+		
+		if (wrongGuesses.indexOf(userGuess) !== -1){
+		alert("You already tried that key..");
+	}
+	else {
 			wrongGuesses.push(userGuess);
 			guessesLeft --;
 			var wg = document.getElementById('wrong');
 			wg.innerHTML=wrongGuesses;
 		}
+}
+	// if (wrongGuesses.indexOf(userGuess) !== -1){
+	// 	alert("You already tried that key..");
+	// }
 
 		
 		if(guessComposer.every((v,i)=>v === randomComposer[i]) ){
